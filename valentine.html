@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1.0'>
+<title>Happy Valentine's Day ❤️</title>
+<style>
+body { background: #ffcccc; text-align: center; font-family: 'Arial', sans-serif; }
+.container { margin-top: 50px; }
+h1 { color: red; font-size: 40px; }
+p { font-size: 20px; color: #555; }
+img { width: 300px; height: auto; border-radius: 10px; margin-top: 20px; }
+.heart { font-size: 50px; color: red; animation: heartbeat 1s infinite; }
+@keyframes heartbeat { 0% { transform: scale(1); } 50% { transform: scale(1.3); } 100% { transform: scale(1); } }
+.fade-in { opacity: 0; animation: fadeIn 3s forwards; }
+@keyframes fadeIn { 0% { opacity: 0; } 100% { opacity: 1; } }
+.heart-container { position: fixed; top: 0; left: 0; width: 100%; height: 100%; pointer-events: none; overflow: hidden; }
+.heart-shape { position: absolute; color: red; font-size: 20px; animation: float 5s linear infinite; }
+@keyframes float { 0% { transform: translateY(100vh) scale(0.5); opacity: 1; } 100% { transform: translateY(-10vh) scale(1.5); opacity: 0; } }
+</style>
+<script>
+function createHeart() {
+  const heart = document.createElement('div');
+  heart.className = 'heart-shape';
+  heart.innerHTML = '❤️';
+  heart.style.left = Math.random() * 100 + 'vw';
+  heart.style.animationDuration = Math.random() * 3 + 2 + 's';
+  document.querySelector('.heart-container').appendChild(heart);
+  setTimeout(() => heart.remove(), 5000);
+}
+setInterval(createHeart, 500);
+</script>
+</head>
+<body>
+<div class='heart-container'></div>
+<div class='container fade-in'>
+<h1 class='heart'>❤️ Happy Valentine's Day, My Love! ❤️</h1>
+<p>You are the most beautiful part of my life. I feel lucky to have you in my life. You always motivate me. You love me,care me like my mother did. I love you so much batcha! I love you forever. I love you from bottom of my heart.💕</p>
+<img src='love.jpg' alt='Our Love Picture'>
+<p>Forever Yours,</p>
+<p><b>Your Batcha</b></p>
+<audio autoplay loop
+<source src='ourFav.mp3' type='audio/mp3'>
+Your browser does not support audio.
+</audio>
+</div>
+</body>
+</html>
